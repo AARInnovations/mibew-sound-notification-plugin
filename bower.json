@@ -1,0 +1,19 @@
+{
+    "name": "mibew-sound-notification-plugin",
+    "title": "Mibew Sound Notification plugin plays sound when new visitor requests a chat",
+    "description": "Plugin notifies a Mibew operator about new visitors requesting a chat in the Windows system tray.",
+    "version": "1.0.0",
+    "author": {
+        "name": "AAR Innovations",
+        "url": "http://aar-innovations.com"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies": {
+        "ion.sound": "git://github.com/IonDen/ion.sound.git"
+    }
+} 
