@@ -1,4 +1,4 @@
-# Mibew Sound Notification plugin
+# Sound Notification plugin for Mibew Messendger
 
 Plugin plays sound when new visitor requests a chat. 
 
