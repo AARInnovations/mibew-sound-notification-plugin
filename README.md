@@ -1,6 +1,6 @@
 # Sound Notification plugin for Mibew Messenger
 
-Plugin plays sound when new visitor requests a chat. 
+Plugin plays sound in the operator browser when new visitor requests a chat. 
 
 <h2>Installation</h2>
 
