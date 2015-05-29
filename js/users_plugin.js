@@ -40,11 +40,14 @@
                 name: "bell_ring"
             }
         ],
-        path: "/mibew/plugins/AARInnovations/Mibew/Plugin/SoundNotification/sound/",
+        // Mibew can be installed to different folders so we have to generate
+        // the correct sounds path at the server and pass it to the client side
+        // with plugin's options.
+        path: Mibew.PluginOptions.SoundNotificationPlugin.soundsDir,
         loop: true,
         volume: 1.0
     };
-    
+
     module.addInitializer(function() {
         Mibew.Objects.Collections.threads.on('add', function(model) {
             $.ionSound(config);
