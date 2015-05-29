@@ -48,7 +48,8 @@ var getSources = function() {
             'README.md',
             'LICENSE',
             'js/*',
-            'vendor/ion.sound/ion.sound.js'
+            'vendor/ionsound/js/ion.sound.min.js',
+            'vendor/ionsound/sounds/bell_ring.*'
         ],
         {base: './'}
     )

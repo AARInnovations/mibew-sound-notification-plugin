@@ -14,6 +14,6 @@
         }
     ],
     "dependencies": {
-        "ion.sound": "git://github.com/IonDen/ion.sound.git"
+        "ionsound": "3.0.1"
     }
 } 

@@ -67,6 +67,7 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
         // Attach CSS and JS files of the plugin to chat window.
         $dispatcher = EventDispatcher::getInstance();
         $dispatcher->attachListener(Events::PAGE_ADD_JS, $this, 'attachJsFiles');
+        $dispatcher->attachListener(Events::PAGE_ADD_JS_PLUGIN_OPTIONS, $this, 'attachPluginOptions');
     }
 
     /**
@@ -80,9 +81,26 @@ class Plugin extends \Mibew\Plugin\AbstractPlugin implements \Mibew\Plugin\Plugi
 
         if ($need_users_plugin) {
             $base_path = $this->getFilesPath();
-            $args['js'][] = $base_path . '/vendor/ion-sound/ion.sound.min.js';
+            $args['js'][] = $base_path . '/vendor/ionsound/js/ion.sound.min.js';
 
             $args['js'][] = $base_path . '/js/users_plugin.js';
+        }
+    }
+
+    /**
+     * Event handler for "Events::PAGE_ADD_JS_PLUGIN_OPTIONS" event.
+     *
+     * @param array $args
+     */
+    public function attachPluginOptions(&$args)
+    {
+        $request = $args['request'];
+
+        if ($this->needUsersPlugin($args['request'])) {
+            $args['plugins']['SoundNotificationPlugin'] = array(
+                'soundsDir' => ($request->getBasePath() . '/' . $this->getFilesPath()
+                    . '/vendor/ionsound/sounds/'),
+            );
         }
     }
 
