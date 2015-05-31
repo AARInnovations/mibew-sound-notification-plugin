@@ -9,8 +9,8 @@
     },
     "licenses": [
         {
-            "type": "MIT",
-            "url": "http://opensource.org/licenses/MIT"
+            "type": "Apache License 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
         }
     ],
     "dependencies": {
